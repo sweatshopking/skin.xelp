@@ -194,7 +194,9 @@
 			<orientation>vertical</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime easing="inout" tween="sine">250</scrolltime>
+			<onleft>ClearProperty(HubFanart,Home)</onleft>
 			<onleft>99</onleft>
+			<onback>ClearProperty(HubFanart,Home)</onback>
 			<onback>99</onback>
 			<include>WindowHomeFadeAnimation</include>
 			<visible>[String.IsEmpty(Container(99).ListItem.Property(widget)) + String.IsEqual(Container(99).ListItem.Label2,$PARAM[widget]) ] | String.IsEqual(Container(99).ListItem.Property(widget),$PARAM[widget])</visible>
@@ -245,7 +247,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]2).NumItems,0)">SetFocus($PARAM[ID]02)</ondown>
@@ -440,7 +444,9 @@
 					
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]2).NumItems,0)">SetFocus($PARAM[ID]02)</ondown>
@@ -635,7 +641,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]3).NumItems,0)">SetFocus($PARAM[ID]03)</ondown>
@@ -830,7 +838,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]4).NumItems,0)">SetFocus($PARAM[ID]04)</ondown>
@@ -1025,7 +1035,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]5).NumItems,0)">SetFocus($PARAM[ID]05)</ondown>
@@ -1220,7 +1232,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]6).NumItems,0)">SetFocus($PARAM[ID]06)</ondown>
@@ -1415,7 +1429,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]7).NumItems,0)">SetFocus($PARAM[ID]07)</ondown>
@@ -1610,7 +1626,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown condition="Integer.IsGreater(Container($PARAM[ID]8).NumItems,0)">SetFocus($PARAM[ID]08)</ondown>
@@ -1805,7 +1823,9 @@
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					<ondown>noop</ondown>

@@ -1,3 +1,8 @@
+[B]1.0.6[/B]
+- Fixed: coming back from a film's page to Home dropped focus onto the left menu (and lost the backdrop), so the next press seemed to do nothing. Focus now stays on the film you opened.
+- Home backdrop follows the highlighted title directly instead of being set once, so it no longer goes blank while rows reload.
+- The start-up logo closes as soon as you press a button instead of always waiting 4 seconds.
+
 [B]1.0.5[/B]
 - Film page: the Rotten Tomatoes critics score (tomato) and audience score (popcorn) are now shown side by side, each with its own number, instead of one number shared between two icons.
 

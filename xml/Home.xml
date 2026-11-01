@@ -15,15 +15,728 @@
 	<controls>
 		<control type="group">
 			<!-- xelp: dimmed art of the selected title behind the home rows -->
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>3840</width>
-				<height>2160</height>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<texture background="true" colordiffuse="48ffffff">$INFO[Window(Home).Property(HubFanart)]</texture>
-				<visible>!String.IsEmpty(Window(Home).Property(HubFanart))</visible>
+			<!-- xelp: dimmed art of the highlighted title behind the home rows (follows the focused row live) -->
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(10091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(10091)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(20091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(20091)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(30091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(30091)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(40091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(40091)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(50091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(50091)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(60091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(60091)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(70091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(70091)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80001).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80001)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80002).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80002)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80003).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80003)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80004).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80004)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80005).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80005)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80006).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80006)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80007).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80007)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80008).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80008)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>3840</width>
+					<height>2160</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="48ffffff">$INFO[Container(80091).ListItem.Art(fanart)]</texture>
+					<visible>Control.HasFocus(80091)</visible>
+				</control>
 			</control>
 			<!-- xelp: clock and greeting -->
 			<control type="label">
@@ -73,7 +786,6 @@
 				<onright>ClearProperty(MainMenuFocus,home)</onright>
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
-				<onfocus>ClearProperty(HubFanart,Home)</onfocus>
 				<onfocus>ClearProperty(IdleSlideshowManual,Home)</onfocus>
 				<onright>SetProperty(WidgetHasFocus,1,Home)</onright>
 				<onright condition="String.IsEqual(Container(99).ListItem.Property(widget),widget1) | String.IsEqual(Container(99).ListItem.Label2,widget1)">SetFocus(100)</onright>

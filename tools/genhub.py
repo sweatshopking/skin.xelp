@@ -87,7 +87,9 @@ def row(n, gm=None):
 					<focusposition>0</focusposition>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>ClearProperty(HubFanart,Home)</onleft>
 					<onleft>99</onleft>
+					<onback>ClearProperty(HubFanart,Home)</onback>
 					<onback>99</onback>
 					<onright>noop</onright>
 					{navs(n)}
@@ -267,7 +269,9 @@ new = '''<include name="ParamWidgetInclude">''' + hidden + '''
 			<orientation>vertical</orientation>
 			<itemgap>0</itemgap>
 			<scrolltime easing="inout" tween="sine">250</scrolltime>
+			<onleft>ClearProperty(HubFanart,Home)</onleft>
 			<onleft>99</onleft>
+			<onback>ClearProperty(HubFanart,Home)</onback>
 			<onback>99</onback>
 			<include>WindowHomeFadeAnimation</include>
 			<visible>''' + page_visible + '''</visible>''' + rows() + '''
