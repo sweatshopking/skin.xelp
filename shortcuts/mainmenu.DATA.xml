@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<defaultID>script.globalsearch</defaultID>
-		<label>137</label>
-		<label2>script.globalsearch</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb>Global search</thumb>
-		<action>RunScript(script.globalsearch)</action>
-	</shortcut>
-	<shortcut>
 		<defaultID>home</defaultID>
 		<label>10000</label>
 		<label2>widget1</label2>
@@ -89,6 +81,14 @@
 		<icon>DefaultShortcut.png</icon>
 		<thumb>Weather</thumb>
 		<action>ActivateWindow(Weather)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>script.globalsearch</defaultID>
+		<label>137</label>
+		<label2>script.globalsearch</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>Global search</thumb>
+		<action>RunScript(script.globalsearch)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>exit</defaultID>

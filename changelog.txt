@@ -1,3 +1,6 @@
+[B]1.0.3[/B]
+- Default main menu: Home is the first entry (you land on it), and Search sits just above System.
+
 [B]1.0.2[/B]
 - The mouse pointer is now a small amber dot instead of fTV's "WARNING! Mouse not supported please disable" banner, which appeared on screen at start-up whenever a controller registered as a mouse.
 
