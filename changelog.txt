@@ -1,3 +1,6 @@
+[B]1.0.2[/B]
+- The mouse pointer is now a small amber dot instead of fTV's "WARNING! Mouse not supported please disable" banner, which appeared on screen at start-up whenever a controller registered as a mouse.
+
 [B]1.0.1[/B]
 - Start-up screen now shows the xelp splash instead of the old fTV logo.
 - Games on the Home page (when Games is highlighted in the menu) is a wrapped poster grid instead of one row.
