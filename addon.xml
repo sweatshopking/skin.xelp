@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.xelp" version="1.0.0" name="xelp" provider-name="sweatshopking (based on fTV by Hitcher)">
+	<requires>
+		<import addon="xbmc.gui" version="5.17.0"/>
+		<import addon="script.favourites" version="5.0.2"/>
+		<import addon="script.globalsearch" version="3.0.4"/>
+        <import addon="script.skinshortcuts" version="0.4.0" />
+		<import addon="resource.uisounds.ftv" version="1.0.1"/>
+		<import addon="script.skinvariables" version="2.1.14"/>
+		<import addon="plugin.video.themoviedb.helper" version="5.2.25" />
+		<import addon="resource.images.weatherfanart.single" version="0.0.6" />
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
+		<res width="3840" height="2160" aspect="16:9" default="true" folder="xml"/>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+		</assets>
+		<news>1.0.0: first release. Poster-grid library pages, Plex-style home pages with real scrolling rows, dimmed backdrop art, clock and greeting, Rotten Tomatoes audience score, film page opens on the play button.</news>
+		<summary lang="en_GB">A TV-first skin with poster grids and rows you can scroll in every direction.</summary>
+		<description lang="en_GB">xelp is a skin for living-room Kodi, built for a TV and a controller. Library pages are poster grids; the home pages are stacks of real rows (Continue Watching, Recently Added, Recommended and more) that scroll in every direction, with the selected title's art dimmed behind them.[CR][CR]It is a fork of the fTV skin by Hitcher, with a rebuilt home, a new grid view, and many small fixes.[CR][CR]Uses: Global Search, Up Next, TMDb Helper, Trakt, Special Features.</description>
+		<disclaimer lang="en_GB">Made for a TV with a remote or game controller. Does not support mouse, touch, or Live TV. Press the context-menu button (X on an Xbox pad) on a row item for options such as removing it from Continue Watching. Tested on Kodi 21 (Omega) on Linux.</disclaimer>
+		<license>CC BY-NC-SA 3.0 (derivative of fTV by Hitcher)</license>
+		<source>https://github.com/sweatshopking/skin.xelp</source>
+		<website>https://github.com/sweatshopking/skin.xelp</website>
+	</extension>
+</addon>

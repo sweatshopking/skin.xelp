@@ -1,0 +1,10 @@
+[B]1.0.0[/B]
+- First release of xelp, a fork of the fTV skin by Hitcher.
+- New Poster Grid view for movies, TV shows, seasons and games (title and year under every poster).
+- Home pages rebuilt as real rows: heading above each row, titled posters, scroll up/down between rows and sideways inside a row.
+- Dimmed backdrop art of the selected title behind the home rows; clock and greeting on the Home page.
+- Continue Watching opens the next episode; context-menu hint ("Press X for options").
+- Film page opens on the play button (Watch Now / Resume) instead of the Overview tab.
+- Rotten Tomatoes audience score shown when the library has it.
+- Titles with no artwork show their name on the card instead of a blank tile.
+- Fixed: view switching removed (the grid is the only view for those lists); several focus and click bugs of the old home rows.
