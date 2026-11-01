@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1114">
+	<!-- xelp: picture screensaver drawn by the skin itself (works on every platform).
+	     Switched on by setting the skin string IdleSlideshowPath to a folder of pictures,
+	     e.g. C:/Users/htpc/Pictures/Wallpapers/  Shows after 2 minutes without any input, or 2 seconds after System > Screensaver is chosen (cleared as soon as you move in Home)
+	     (controller, keyboard or mouse) when nothing is playing. Any input hides it. -->
+	<zorder>99</zorder>
+	<visible>!String.IsEmpty(Skin.String(IdleSlideshowPath)) + !Player.HasMedia + [System.IdleTime(120) | [String.IsEqual(Window(Home).Property(IdleSlideshowManual),1) + System.IdleTime(2)]]</visible>
+	<controls>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture colordiffuse="ff000000">common/white_square.png</texture>
+		</control>
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath random="true">$INFO[Skin.String(IdleSlideshowPath)]</imagepath>
+			<timeperimage>12000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="100" end="108" center="auto" time="12000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
+		</control>
+	</controls>
+</window>

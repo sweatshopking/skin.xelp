@@ -74,6 +74,7 @@
 				<onfocus>ClearProperty(ForceViewType,home)</onfocus>
 				<onfocus>ClearProperty(WidgetHasFocus,Home)</onfocus>
 				<onfocus>ClearProperty(HubFanart,Home)</onfocus>
+				<onfocus>ClearProperty(IdleSlideshowManual,Home)</onfocus>
 				<onright>SetProperty(WidgetHasFocus,1,Home)</onright>
 				<onright condition="String.IsEqual(Container(99).ListItem.Property(widget),widget1) | String.IsEqual(Container(99).ListItem.Label2,widget1)">SetFocus(100)</onright>
 				<onright condition="String.IsEqual(Container(99).ListItem.Property(widget),widget2) | String.IsEqual(Container(99).ListItem.Label2,widget2)">SetFocus(200)</onright>

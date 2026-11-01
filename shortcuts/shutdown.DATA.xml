@@ -70,6 +70,7 @@
 		<label2>Kodi Command</label2>
 		<icon>shutdown/DefaultScreensaver.png</icon>
 		<thumb />
+		<action>SetProperty(IdleSlideshowManual,1,Home)</action>
 		<action>ActivateScreensaver</action>
 	</shortcut>
 	<shortcut>

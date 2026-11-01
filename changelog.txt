@@ -1,3 +1,6 @@
+[B]1.0.4[/B]
+- New: picture screensaver drawn by the skin itself (works on Windows, where Kodi's add-on screensaver fails). Set the skin string IdleSlideshowPath to a folder of pictures; it appears after 2 minutes without input, or when System > Screensaver is chosen, and any input hides it.
+
 [B]1.0.3[/B]
 - Default main menu: Home is the first entry (you land on it), and Search sits just above System.
 
