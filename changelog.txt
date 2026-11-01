@@ -1,3 +1,8 @@
+[B]1.0.1[/B]
+- Start-up screen now shows the xelp splash instead of the old fTV logo.
+- Games on the Home page (when Games is highlighted in the menu) is a wrapped poster grid instead of one row.
+- Main menu: the old "Exit" entry is now "System" and holds Settings, Reboot, Power off and the rest; the separate Settings entry is gone from the default menu.
+
 [B]1.0.0[/B]
 - First release of xelp, a fork of the fTV skin by Hitcher.
 - New Poster Grid view for movies, TV shows, seasons and games (title and year under every poster).

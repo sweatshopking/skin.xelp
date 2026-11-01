@@ -5,11 +5,9 @@
 		<control type="group">
 			<include>BackgroundImage</include>
 			<control type="image">
-				<centertop>50%</centertop>
-				<centerleft>50%</centerleft>
-				<width>512</width>
-				<height>512</height>
-				<texture>ftv_icon.png</texture>
+				<include>FullscreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture>xelp_splash.png</texture>
 				<include>StartUpFadeAnimation</include>
 			</control>
 		</control>

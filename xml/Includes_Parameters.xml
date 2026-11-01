@@ -199,7 +199,7 @@
 			<include>WindowHomeFadeAnimation</include>
 			<visible>[String.IsEmpty(Container(99).ListItem.Property(widget)) + String.IsEqual(Container(99).ListItem.Label2,$PARAM[widget]) ] | String.IsEqual(Container(99).ListItem.Property(widget),$PARAM[widget])</visible>
 			<control type="group">
-				<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) + Integer.IsGreater(Container($PARAM[ID]1).NumItems,0)</visible>
+				<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) + Integer.IsGreater(Container($PARAM[ID]1).NumItems,0) + !String.IsEqual(Skin.String($PARAM[ID]0-WidgetList-1),plugin://plugin.program.htpc.games/)</visible>
 				<height>860</height>
 				<control type="label">
 					<left>16</left>
@@ -391,6 +391,201 @@
 						</control>
 					</focusedlayout>
 					<content target="$INFO[Skin.String($PARAM[ID]0-WidgetType-1)]" sortby="$INFO[Skin.String($PARAM[ID]0-WidgetSortBy-1)]" sortorder="$INFO[Skin.String($PARAM[ID]0-WidgetSortOrder-1)]" limit="40">$INFO[Skin.String($PARAM[ID]0-WidgetList-1)]</content>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-1)) + Integer.IsGreater(Container($PARAM[ID]1).NumItems,0) + String.IsEqual(Skin.String($PARAM[ID]0-WidgetList-1),plugin://plugin.program.htpc.games/)</visible>
+				<height>1860</height>
+				<control type="label">
+					<left>16</left>
+					<top>6</top>
+					<width>2800</width>
+					<height>80</height>
+					<font>Med34</font>
+					<aligny>center</aligny>
+					<textcolor>ffbcbcbc</textcolor>
+					<label>$INFO[Skin.String($PARAM[ID]0-WidgetLabel-1)]</label>
+					<visible>!Control.HasFocus($PARAM[ID]91)</visible>
+				</control>
+				<control type="label">
+					<left>16</left>
+					<top>6</top>
+					<width>2800</width>
+					<height>80</height>
+					<font>Med34</font>
+					<aligny>center</aligny>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[Skin.String($PARAM[ID]0-WidgetLabel-1)]</label>
+					<visible>Control.HasFocus($PARAM[ID]91)</visible>
+				</control>
+				<control type="label">
+					<left>1900</left>
+					<top>6</top>
+					<width>1000</width>
+					<height>80</height>
+					<font>Light26</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>ff7a7c80</textcolor>
+					<label>Press X for options</label>
+					<visible>Control.HasFocus($PARAM[ID]91)</visible>
+				</control>
+				<control id="$PARAM[ID]91" type="panel">
+					<left>0</left>
+					<top>90</top>
+					<width>2940</width>
+					<height>1760</height>
+					<orientation>vertical</orientation>
+					<viewtype label="">list</viewtype>
+					
+					<preloaditems>2</preloaditems>
+					<scrolltime easing="inout" tween="sine">250</scrolltime>
+					<onleft>99</onleft>
+					<onback>99</onback>
+					<onright>noop</onright>
+					<ondown condition="Integer.IsGreater(Container($PARAM[ID]2).NumItems,0)">SetFocus($PARAM[ID]02)</ondown>
+					<ondown condition="Integer.IsGreater(Container($PARAM[ID]3).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]2).NumItems,0)">SetFocus($PARAM[ID]03)</ondown>
+					<ondown condition="Integer.IsGreater(Container($PARAM[ID]4).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]2).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]3).NumItems,0)">SetFocus($PARAM[ID]04)</ondown>
+					<ondown condition="Integer.IsGreater(Container($PARAM[ID]5).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]2).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]3).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]4).NumItems,0)">SetFocus($PARAM[ID]05)</ondown>
+					<ondown condition="Integer.IsGreater(Container($PARAM[ID]6).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]2).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]3).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]4).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]5).NumItems,0)">SetFocus($PARAM[ID]06)</ondown>
+					<ondown condition="Integer.IsGreater(Container($PARAM[ID]7).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]2).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]3).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]4).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]5).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]6).NumItems,0)">SetFocus($PARAM[ID]07)</ondown>
+					<ondown condition="Integer.IsGreater(Container($PARAM[ID]8).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]2).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]3).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]4).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]5).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]6).NumItems,0) + !Integer.IsGreater(Container($PARAM[ID]7).NumItems,0)">SetFocus($PARAM[ID]08)</ondown>
+					<ondown>noop</ondown>
+					<onup>noop</onup>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode)">Action(Info)</onclick>
+					<onclick condition="ListItem.IsFolder + !String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,episode)">ActivateWindow(Videos,$INFO[ListItem.FolderPath],return)</onclick>
+					<onclick condition="!ListItem.IsFolder + !String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,episode)">PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
+					<itemlayout height="770" width="460">
+						<control type="group">
+							<left>40</left>
+							<top>20</top>
+							<control type="image">
+								<width>380</width>
+								<height>570</height>
+								<aspectratio align="center">scale</aspectratio>
+								<texture background="true" colordiffuse="d0ffffff" fallback="views/movie_fallback.png">$VAR[PosterImage]</texture>
+							</control>
+								<control type="textbox">
+									<left>24</left>
+									<top>190</top>
+									<width>332</width>
+									<height>200</height>
+									<font>Med28</font>
+									<aligny>center</aligny>
+									<align>center</align>
+									<textcolor>ffbcbcbc</textcolor>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(thumb))</visible>
+								</control>
+							<control type="image">
+								<width>110</width>
+								<height>110</height>
+								<texture>$INFO[ListItem.VideoResolution,views/resolution/,.png]</texture>
+							</control>
+							<control type="image">
+								<width>110</width>
+								<height>110</height>
+								<texture>views/OverlayWatched.png</texture>
+								<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + [!Integer.IsEqual(ListItem.Property(NumEpisodes),0) | String.IsEmpty(ListItem.Property(NumEpisodes))]</visible>
+							</control>
+							<control type="label">
+								<top>588</top>
+								<width>380</width>
+								<height>56</height>
+								<font>Light22</font>
+								<textcolor>ffd8d8d8</textcolor>
+								<label>$VAR[GridTitleLabel]</label>
+							</control>
+							<control type="label">
+								<top>648</top>
+								<width>380</width>
+								<height>48</height>
+								<font>Light22</font>
+								<textcolor>ff7a7c80</textcolor>
+								<label>$VAR[GridSubLabel]</label>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="770" width="460">
+						<control type="button">
+							<include>HiddenControl</include>
+							<onfocus>SetProperty(HubFanart,$INFO[ListItem.Art(fanart)],Home)</onfocus>
+						</control>
+						<control type="group">
+							<left>40</left>
+							<top>20</top>
+							<control type="group">
+							<animation center="190,285" easing="inout" effect="zoom" end="105" start="100" time="200" tween="sine">Focus</animation>
+							<control type="image">
+								<left>-8</left>
+								<top>-8</top>
+								<width>396</width>
+								<height>586</height>
+								<texture colordiffuse="ffe9a01e">common/white_square.png</texture>
+								<visible>Control.HasFocus($PARAM[ID]91)</visible>
+							</control>
+							<control type="image">
+								<width>380</width>
+								<height>570</height>
+								<aspectratio align="center">scale</aspectratio>
+								<texture background="true" fallback="views/movie_fallback.png">$VAR[PosterImage]</texture>
+							</control>
+								<control type="textbox">
+									<left>24</left>
+									<top>190</top>
+									<width>332</width>
+									<height>200</height>
+									<font>Med28</font>
+									<aligny>center</aligny>
+									<align>center</align>
+									<textcolor>ffbcbcbc</textcolor>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(thumb))</visible>
+								</control>
+							<control type="image">
+								<width>110</width>
+								<height>110</height>
+								<texture>$INFO[ListItem.VideoResolution,views/resolution/,.png]</texture>
+							</control>
+							<control type="image">
+								<width>110</width>
+								<height>110</height>
+								<texture>views/OverlayWatched.png</texture>
+								<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + [!Integer.IsEqual(ListItem.Property(NumEpisodes),0) | String.IsEmpty(ListItem.Property(NumEpisodes))]</visible>
+							</control>
+							</control>
+							<control type="label">
+								<top>588</top>
+								<width>380</width>
+								<height>56</height>
+								<font>Light22</font>
+<scroll>false</scroll>
+								<textcolor>ffe9a01e</textcolor>
+								<label>$VAR[GridTitleLabel]</label>
+								<visible>Control.HasFocus($PARAM[ID]91)</visible>
+							</control>
+							<control type="label">
+								<top>588</top>
+								<width>380</width>
+								<height>56</height>
+								<font>Light22</font>
+<scroll>false</scroll>
+								<textcolor>ffd8d8d8</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Control.HasFocus($PARAM[ID]91)</visible>
+							</control>
+							<control type="label">
+								<top>648</top>
+								<width>380</width>
+								<height>48</height>
+								<font>Light22</font>
+<scroll>false</scroll>
+								<textcolor>ffa4a4a4</textcolor>
+								<label>$VAR[GridSubLabel]</label>
+							</control>
+						</control>
+					</focusedlayout>
+					<content target="$INFO[Skin.String($PARAM[ID]0-WidgetType-1)]" sortby="$INFO[Skin.String($PARAM[ID]0-WidgetSortBy-1)]" sortorder="$INFO[Skin.String($PARAM[ID]0-WidgetSortOrder-1)]" limit="100">$INFO[Skin.String($PARAM[ID]0-WidgetList-1)]</content>
 				</control>
 			</control>
 			<control type="group">

@@ -91,16 +91,8 @@
 		<action>ActivateWindow(Weather)</action>
 	</shortcut>
 	<shortcut>
-		<defaultID>settings</defaultID>
-		<label>10004</label>
-		<label2>settings</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb>Settings</thumb>
-		<action>ActivateWindowAndFocus(Settings,9000,0)</action>
-	</shortcut>
-	<shortcut>
 		<defaultID>exit</defaultID>
-		<label>13012</label>
+		<label>System</label>
 		<label2>exit</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb>Exit</thumb>

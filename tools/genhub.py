@@ -35,11 +35,13 @@ def navs(n):
     out.append('<onup>noop</onup>')
     return "\n\t\t\t\t\t".join(out)
 
-def row(n):
+GM='String.IsEqual(Skin.String($PARAM[ID]0-WidgetList-1),plugin://plugin.program.htpc.games/)'
+
+def row(n, gm=None):
     c=contents[n]
     return f'''
 			<control type="group">
-				<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-{n})) + Integer.IsGreater(Container($PARAM[ID]{n}).NumItems,0)</visible>
+				<visible>!String.IsEmpty(Skin.String($PARAM[ID]0-WidgetList-{n})) + Integer.IsGreater(Container($PARAM[ID]{n}).NumItems,0){(' + '+gm) if gm else ''}</visible>
 				<height>860</height>
 				<control type="label">
 					<left>16</left>
@@ -226,6 +228,27 @@ def row(n):
 				</control>
 			</control>'''
 
+def gridrow(n):
+    """Same row, but a wrapped multi-row grid (used for the Games page)."""
+    r=row(n, GM)
+    r=r.replace("<height>860</height>","<height>1860</height>",1)
+    r=r.replace("$PARAM[ID]0%d"%n,"$PARAM[ID]9%d"%n)
+    r=r.replace('type="fixedlist"','type="panel"',1)
+    r=r.replace("<orientation>horizontal</orientation>","<orientation>vertical</orientation>",1)
+    r=r.replace("<height>770</height>","<height>1760</height>",1)
+    r=r.replace("<focusposition>0</focusposition>","",1)
+    r=r.replace('limit="40"','limit="100"')
+    return r
+
+def rows():
+    out=""
+    for n in range(1,9):
+        if n==1:
+            out+=row(1,"!"+GM)+gridrow(1)
+        else:
+            out+=row(n)
+    return out
+
 hidden=""
 for n in range(1,9):
     c1=contents[n].replace('limit="40"','limit="1"')
@@ -247,7 +270,7 @@ new = '''<include name="ParamWidgetInclude">''' + hidden + '''
 			<onleft>99</onleft>
 			<onback>99</onback>
 			<include>WindowHomeFadeAnimation</include>
-			<visible>''' + page_visible + '''</visible>''' + "".join(row(n) for n in range(1,9)) + '''
+			<visible>''' + page_visible + '''</visible>''' + rows() + '''
 		</control>
 	</include>'''
 s=s[:i]+new+s[j:]
