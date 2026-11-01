@@ -43,5 +43,5 @@ the list of changes. Film posters in the screenshots belong to their owners.
 
 ## Building the zip
 
-`tools/build-zip.sh` makes `dist/skin.xelp-<version>.zip` (the zip must contain a top-level `skin.xelp/` folder).
+`tools/build_zip.py` makes `dist/skin.xelp-<version>.zip` (the zip must contain a top-level `skin.xelp/` folder).
 `tools/genhub.py` regenerates the home-row template in `xml/Includes_Parameters.xml` (development use only).
