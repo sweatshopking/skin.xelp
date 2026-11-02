@@ -7,12 +7,15 @@ A TV-first skin built for a remote or game controller:
   Recommended…), a heading above each, up/down between rows, sideways inside a row.
 - **Dimmed backdrop** of the selected title behind the rows, a clock and a greeting.
 - **Continue Watching opens the next episode.** Press the context-menu button (X on an Xbox pad) on any item
-  for options such as *Reset resume position* to remove it from Continue Watching.
-- Film pages open on the **play button**; Rotten Tomatoes audience score is shown when your library has it.
+  for options such as *Remove from continue watching*.
+- Film pages open on the **play button**, with the Rotten Tomatoes critics (tomato) and audience (popcorn)
+  scores shown separately when your library has them.
 - Titles with no artwork show their name on the card instead of a blank tile.
+- A **System** menu for power options (reboot, shut down, screensaver) and Settings, and a picture
+  slideshow as the screensaver when a wallpaper folder is set.
 
 ![Movies](resources/screenshot-01.jpg)
-![Grid](resources/screenshot-02.jpg)
+![Movies library as a poster grid](resources/screenshot-02.jpg)
 ![Film page](resources/screenshot-03.jpg)
 ![Kids TV](resources/screenshot-04.jpg)
 
