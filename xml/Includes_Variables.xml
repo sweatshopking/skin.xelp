@@ -2641,4 +2641,15 @@
 		<value condition="String.IsEqual(ListItem.Season,0)">$LOCALIZE[31146] $LOCALIZE[20359] $INFO[ListItem.Episode]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
+	<!-- xelp: watched / unwatched button on the info page -->
+	<variable name="XelpWatchedFlag">
+		<value condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + String.IsEqual(ListItem.Property(UnWatchedEpisodes),0)">1</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)] + Integer.IsGreater(ListItem.PlayCount,0)">1</value>
+		<value>0</value>
+	</variable>
+	<variable name="XelpWatchedLabel">
+		<value condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + String.IsEqual(ListItem.Property(UnWatchedEpisodes),0)">Mark as[CR]unwatched</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)] + Integer.IsGreater(ListItem.PlayCount,0)">Mark as[CR]unwatched</value>
+		<value>Mark as[CR]watched</value>
+	</variable>
 </includes>

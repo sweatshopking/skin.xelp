@@ -377,6 +377,24 @@
 					<texturefocus border="28,12,10,14">views/button_fo.png</texturefocus>
 					<texturenofocus border="32,12,12,12">views/button_nf.png</texturenofocus>
 				</control>
+				<!-- Watched / unwatched button (xelp) -->
+				<control id="1010" type="button">
+					<width min="248" max="408">auto</width>
+					<wrapmultiline>true</wrapmultiline>
+					<height>232</height>
+					<onup condition="!Control.IsVisible(96)">Close</onup>
+					<onup condition="Control.IsVisible(96)">3002</onup>
+					<ondown>500</ondown>
+					<onclick>RunScript(special://skin/extras/xelp_watched.py,$INFO[ListItem.DBTYPE],$INFO[ListItem.DBID],$VAR[XelpWatchedFlag],$INFO[ListItem.Season],$INFO[ListItem.TvShowDBID])</onclick>
+					<font>Med24</font>
+					<label>$VAR[XelpWatchedLabel]</label>
+					<textoffsetx>56</textoffsetx>
+					<textcolor>ffdadada</textcolor>
+					<focusedcolor>ff222222</focusedcolor>
+					<visible>[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)] + !String.IsEmpty(ListItem.DBID)</visible>
+					<texturefocus border="28,12,10,14">views/button_fo.png</texturefocus>
+					<texturenofocus border="32,12,12,12">views/button_nf.png</texturenofocus>
+				</control>
 				<!-- User Rating Button -->
 				<control id="1002" type="button">
 					<width min="248" max="408">auto</width>
@@ -578,6 +596,20 @@
 					<textcolor>00ffffff</textcolor>
 					<focusedcolor>00ffffff</focusedcolor>
 					<visible>Control.IsEnabled(9)</visible>
+					<texturefocus/>
+					<texturenofocus/>
+				</control>
+				<!-- Watched / unwatched spacer (xelp): keeps the star rating aligned with its button -->
+				<control type="button">
+					<width min="248" max="408">auto</width>
+					<wrapmultiline>true</wrapmultiline>
+					<height>232</height>
+					<font>Med24</font>
+					<label>$VAR[XelpWatchedLabel]</label>
+					<textoffsetx>56</textoffsetx>
+					<textcolor>00ffffff</textcolor>
+					<focusedcolor>00ffffff</focusedcolor>
+					<visible>[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)] + !String.IsEmpty(ListItem.DBID)</visible>
 					<texturefocus/>
 					<texturenofocus/>
 				</control>

@@ -1,3 +1,7 @@
+[B]1.0.7[/B]
+- New: "Mark as watched / unwatched" button on the film, show, season and episode info pages. It works through the Kodi library, so PlexKodiConnect passes the change on to Plex.
+- Fixed: the "Recently Added TV" row kept showing shows you had finished. It now lists only shows with something left to watch, like the film row does.
+
 [B]1.0.6[/B]
 - Fixed: coming back from a film's page to Home dropped focus onto the left menu (and lost the backdrop), so the next press seemed to do nothing. Focus now stays on the film you opened.
 - Home backdrop follows the highlighted title directly instead of being set once, so it no longer goes blank while rows reload.
